@@ -2,15 +2,18 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 data = np.random.randint(0,2,15)
-time = np.linspace(0,len(data),len(data)*2)
-signal = np.zeros(2*len(data), dtype = int)
-
-for i in range(0,2*len(data),2):
-    if data[i//2] == 1:
-       signal[i] = 1
+time = np.arange(len(data))
+signal = np.zeros(len(data), dtype = int)
+flg= False
+for i in range(0,len(data)):
+    if data[i] == 1:
+        if flg:
+            signal[i] = -1
+        else:
+            signal[i] = 1
+        flg = not flg
     else:
-        signal[i] = -1
-    signal[i+1] = 0
+        signal[i] = 0
     
 
 plt.step(time, signal,where='post')

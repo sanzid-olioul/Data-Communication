@@ -12,7 +12,7 @@ for i in range(len(data)):
     
 
 plt.step(time, signal,where='post')
-plt.title('Unipolar')
+plt.title('NRZ-L')
 plt.xlabel('Amplitude')
 plt.ylabel('Time')
 plt.text(0, 2, data)

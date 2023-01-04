@@ -14,7 +14,7 @@ for i in range(len(data)):
         signal[i] = -1
 
 plt.step(time, signal,where='post')
-plt.title('Unipolar')
+plt.title('NRZ-I')
 plt.xlabel('Amplitude')
 plt.ylabel('Time')
 plt.text(0, 2, data)

@@ -34,5 +34,5 @@ plt.text(0, 2, data)
 
 plt.grid(True)
 plt.yticks([-2,-1,0,1,2,3])
-plt.xticks(time_org*2)
+plt.xticks(time_org*2,time_org)
 plt.show()

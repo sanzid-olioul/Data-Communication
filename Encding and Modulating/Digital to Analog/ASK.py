@@ -21,7 +21,11 @@ for i in t:
     u.append(s)
 v=[]
 for i in range(len(t)):
-    v.append(A*num.sin(2*num.pi*F1*t[i])*u[i])
+    if u[i]==0:
+        v.append(num.sin(2*num.pi*F1*t[i]))
+    else:
+        v.append(A*num.sin(2*num.pi*F1*t[i]))
+    
     
 plt.subplot(3,1,1)
 plt.plot(t,x)

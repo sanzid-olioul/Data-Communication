@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as num
-A=5
-f1=33
+A=3
+f1=10
 f2=2
 t=num.arange(0,1,0.001)
 x=A*num.sin(2*num.pi*f1*t)
@@ -35,9 +35,9 @@ plt.grid(True)
 v=[]
 for i in range(len(t)):
     if(u[i]==1):
-        v.append(A*num.sin(2*num.pi*f1*t[i]))
+        v.append(A*num.sin(4*num.pi*f1*t[i]))
     else:
-        v.append(num.sin(2*num.pi*f1*t[i])*-1)
+        v.append(A*num.sin(2*num.pi*f1*t[i]))
 
 plt.subplot(3,1,3)
 plt.plot(t,v)

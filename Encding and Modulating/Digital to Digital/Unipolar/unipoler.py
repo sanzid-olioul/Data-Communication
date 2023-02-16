@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = np.random.randint(0,2,25)
+data = np.random.randint(0,2,10)
 time = np.arange(len(data))
 
 plt.step(time, data,where='post')

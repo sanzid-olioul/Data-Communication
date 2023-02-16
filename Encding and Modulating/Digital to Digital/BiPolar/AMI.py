@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = np.random.randint(0,2,15)
+data = np.random.randint(0,2,10)
 time = np.arange(len(data))
 signal = np.zeros(len(data), dtype = int)
 flg= False
@@ -17,7 +17,7 @@ for i in range(0,len(data)):
     
 
 plt.step(time, signal,where='post')
-plt.title('RZ')
+plt.title('AMI')
 plt.xlabel('Amplitude')
 plt.ylabel('Time')
 plt.text(0, 2, data)

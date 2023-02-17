@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = np.random.randint(0,2,10)
+data = [int(x) for x in input().split()]
 time = np.linspace(0,len(data),len(data)*2)
 signal = np.zeros(2*len(data), dtype = int)
 

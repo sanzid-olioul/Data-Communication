@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = [1,0,0,0,0,0,0,0,0,0,1,1,0,1]
+data = [int(x) for x in input().split()]
 time = np.arange(len(data))
 signal = np.zeros(len(data), dtype = int)
 flg= False
@@ -35,7 +35,7 @@ while i <len(data):
     
 
 plt.step(time, signal,where='post')
-plt.title('AMI')
+plt.title('B8ZS')
 plt.xlabel('Amplitude')
 plt.ylabel('Time')
 plt.text(0, 2, data)

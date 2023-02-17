@@ -6,8 +6,8 @@ time = np.arange(len(data))
 
 plt.step(time, data,where='post')
 plt.title('Unipolar')
-plt.xlabel('Amplitude')
-plt.ylabel('Time')
+plt.xlabel('Time')
+plt.ylabel('Amplitude')
 
 plt.text(0, 2, data)
 

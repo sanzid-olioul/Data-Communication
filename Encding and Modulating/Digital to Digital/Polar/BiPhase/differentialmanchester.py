@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-data = np.random.randint(0,2,10)
+data = [int(x) for x in input().split()]
 time_org = np.arange(len(data))
 signal = np.zeros(len(data)*2, dtype = int)
 

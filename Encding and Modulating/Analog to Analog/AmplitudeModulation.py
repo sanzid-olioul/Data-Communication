@@ -1,17 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-A_c = 3 #float(input('Enter carrier amplitude: '))
-f_c = 5 #float(input('Enter carrier frquency: '))
-A_m = 2 #float(input('Enter message amplitude: '))
-f_m = 2 #float(input('Enter message frquency: '))
+A_c = int(input())
+f_c = int(input())
+A_m = int(input())
+f_m = int(input())
 
 
 t = np.linspace(0, 1, 1000)
 
-carrier = A_c*np.cos(2*np.pi*f_c*t)
-modulator = A_m*np.cos(2*np.pi*f_m*t)
-product = A_c*(1+np.cos(2*np.pi*f_m*t))*np.cos(2*np.pi*f_c*t)
+carrier = A_c*np.sin(2*np.pi*f_c*t)
+modulator = A_m*np.sin(2*np.pi*f_m*t)
+product = A_c*(1+np.sin(2*np.pi*f_m*t))*np.sin(2*np.pi*f_c*t)
 
 plt.subplot(3,1,1)
 plt.title('Amplitude Modulation')

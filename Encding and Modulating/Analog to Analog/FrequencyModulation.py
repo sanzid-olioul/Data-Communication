@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-modulator_frequency = 4
-carrier_frequency = 40
-modulation_index = 1
+modulator_frequency = int(input()) #4
+carrier_frequency = int(input()) #40
+A = 1
 
 time = np.linspace(0,1,1000)
-modulator = np.sin(2 * np.pi * modulator_frequency * time) * modulation_index
+modulator = A*np.sin(2 * np.pi * modulator_frequency * time) 
 carrier = np.sin(2 * np.pi * carrier_frequency * time)
 product = np.zeros_like(modulator)
 
